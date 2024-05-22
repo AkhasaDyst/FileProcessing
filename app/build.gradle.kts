@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.yudhi.fileprocessing"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.yudhi.fileprocessing"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -44,4 +47,15 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    // ViewModel + LiveData
+    implementation ("androidx.activity:activity-ktx:1.4.0")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
+// PDFVtewers
+    implementation ("com.github.barteksc:android-pdf-viewer:2.8.2")
+    implementation ("com.mindorks.android:prdownloader:0.6.0")
+// load image
+    implementation ("com.github.bumptech.glide:glide:4.11.0")
+//ExoPlayer dependency
+    implementation ("com.google.android.exoplayer:exoplayer:2.17.1")
 }
